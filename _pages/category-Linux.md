@@ -1,7 +1,7 @@
 ---
 title: 리눅스
 layout: category
-permalink: /categories/Linux/
+permalink: /categories/linux/
 taxonomy: Linux
 author_profile: true
 ---
