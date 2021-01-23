@@ -1,7 +1,8 @@
 ---
 title: "Transformer : Attention is all you need"
 date: 2021-01-21 22:48:26 -0400
-categories: Google Transformer Attention NLP
+categories: NLP
+tag : ML-Model
 ---  
 
 # **Transformer**
@@ -240,11 +241,11 @@ RNN은 입력을 순차적을 받기 때문에, 현재 시점의 단어를 예�
 이 Look-ahead mask는 디코더의 첫번째 sub-layer에서 이루어진다.  <br>  
 먼저 Self-Attend 연산을 통해 Attention score matrix를 구한다. (이 Self Attention 연산은 인코더의 Self-Attention과 동일하다.)  
 <br>  
-<img src="/assets/images/transformer/decoder_self_attention.jpeg" width=300/><br>
+<img src="/assets/images/transformer/decoder_self_attention.jpeg" width=700/><br>
 디코더에서 Attention Score matrix  
 <br> 
 이 후에 행렬에 현재 시점의 이전 단어들만 참고할 수 있도록 아래와 같이 마스킹을 수행한다.  
-<img src="/assets/images/transformer/decoder_masked_self_attention.jpeg" width=300/><br> 
+<img src="/assets/images/transformer/decoder_masked_self_attention.jpeg" width=500/><br> 
 <br> 
 
 

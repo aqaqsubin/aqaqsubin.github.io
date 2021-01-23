@@ -1,7 +1,7 @@
 ---
 title: "첫 번째 기록"
 date: 2021-01-15 09:47:28 -0400
-categories: update
+categories: etc
 ---
 
 Github 블로그를 처음 만들어 보았다.  
