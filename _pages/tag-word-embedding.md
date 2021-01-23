@@ -2,7 +2,7 @@
 title: Word Embedding
 layout: tag
 permalink: /tags/word-embedding/
-taxonomy: word-embedding
+taxonomy: Word-Embedding
 author_profile: true
 ---
 
