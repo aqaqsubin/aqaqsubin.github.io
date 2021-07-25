@@ -7,7 +7,7 @@ tag : Text-Summarization
 
 # **MatchSum(Zhong et al., 2020, ACL) 실행 가이드**
 
-MatchSum 코드는 아래에 공개되어 있음  
+
 [MATCHSUM git repo](https://github.com/maszhongming/MatchSum)
 
 |PAPER|SOURCE|TYPE|SAMPLE|TRAIN SIZE|VAILD SIZE|TEST SIZE|DOCUMENT TOKEN|SUMMARY TOKEN|
@@ -69,7 +69,7 @@ transformers==2.5.1
 
 압축 해제한 `*.jsonl` 파일을 `MatchSum/data` 경로로 이동
 
-  <br></br>
+<br>
     
     
 
@@ -80,7 +80,7 @@ transformers==2.5.1
 
 `export SAVEPATH=/<trained model save path>/`
 
-<br></br>
+<br>
 
 **모델 학습 파라미터 설정**
 
@@ -108,7 +108,7 @@ Zhong et al.의 실험 환경은 8개의 *Tesla-V100-16G GPU*를 사용하였으
 CUDA_VISIBLE_DEVICES=0,1 python train_matching.py --mode=train --encoder=roberta --save_path=$SAVEPATH --batch_size=8 --candidate_num=16 --gpus=0,1 
 
 ```
-<br></br>
+<br>
  
 **모델 훈련 예시**
 
@@ -119,7 +119,7 @@ MATCHSUM(RoBERTa-base) 모델 훈련
 </div>
 <br>
 
- <br></br>
+ <br>
 
 ### **모델 검증**
 
@@ -148,7 +148,7 @@ CUDA_VISIBLE_DEVICES=0 python train_matching.py --mode=test --encoder=roberta --
 ROUGE 점수는 스크린에 나타나며, 학습된 모델은 `$SAVEPATH/result`에 저장된다
 
   
-<br></br>
+<br>
 
 ### 사전 학습된 모델
 
