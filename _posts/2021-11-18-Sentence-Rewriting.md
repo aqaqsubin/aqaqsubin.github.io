@@ -49,5 +49,5 @@ inference speed 10-20배 개선, training speed 4배 개선
 
 ## 🌱 **세미나 자료**
 
-<iframe src="/assets/files/An-Extraction-Abstraction-Hybrid-Approach.pdf" width="100%" height="350px">
+<iframe src="/assets/files/An-Extraction-Abstraction-Hybrid-Approach.pdf" width="100%" height="550px">
 </iframe>
