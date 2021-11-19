@@ -347,17 +347,17 @@ rouge==1.5.5
     python setup.py install
     ```
     
-    2) **Stanford CoreNLP 4.2.2 (for tokenize) 다운로드**
+    2) **Stanford CoreNLP 4.2.2 (for tokenize) 다운로드**  
     
-        [Stanford CoreNLP 4.2.2 다운로드](https://stanfordnlp.github.io/CoreNLP/)
+    [Stanford CoreNLP 4.2.2 다운로드](https://stanfordnlp.github.io/CoreNLP/)
     
     
     ```bash
     export CLASSPATH=/<corenlp_download_path>/stanford-corenlp-4.2.2.jar
     ```
     
-    3) **ROUGE score 계산** 
-        📢 ROUGE-1.5.5 버전을 설치해야함  
+    3) **ROUGE score 계산**   
+    📢 ROUGE-1.5.5 버전을 설치해야함  
         
     ```bash
     cat test.hypo | java edu.stanford.nlp.process.PTBTokenizer -ioFileList -preserveLines > test.hypo.tokenized
