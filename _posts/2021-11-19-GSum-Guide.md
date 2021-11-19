@@ -14,6 +14,10 @@ use_math: true
 ### **📄Paper: GSum (Dou et al., 2021, NAACL)** 
 GSum: A General Framework for Guided Neural Abstractive Summarization
 
+### **:octocat:Github Repo**  
+https://github.com/neulab/guided_summarization
+
+
 <br>
 
 | Dataset | Source | Type | Train size | Valid size | Test size | Document Token | Summary Token |
@@ -25,7 +29,6 @@ GSum: A General Framework for Guided Neural Abstractive Summarization
 | New York Times | News | SDS |  |  |  |  |   |
 | PubMed | Scientific Paper | SDS | 83233 | 4946 | 5025 | (avg.) 444.0 |  (avg.) 209.5 |
 
-<br>
 
 > 📢 **SDS** : Single Document Summary  
 
