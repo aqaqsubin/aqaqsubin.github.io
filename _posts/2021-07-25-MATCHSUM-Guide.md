@@ -74,7 +74,7 @@ transformers==2.5.1
   
 **모델 저장 경로 설정**
 
-```
+```bash
 export SAVEPATH=/<trained model save path>/
 ```
 
@@ -98,9 +98,10 @@ Zhong et al.의 실험 환경은 8개의 *Tesla-V100-16G GPU*를 사용하였으
 	`class MatchSumLoader` 의 `max_len` (*default=180*)
 
 
-```python
+```bash
 CUDA_VISIBLE_DEVICES=0,1 python train_matching.py --mode=train --encoder=roberta --save_path=$SAVEPATH --batch_size=8 --candidate_num=16 --gpus=0,1 
 ```
+
 <br>
  
 **모델 훈련 예시**
@@ -122,7 +123,7 @@ MATCHSUM(RoBERTa-base) 모델 훈련
 
 **모델 경로 설정**
 
-```
+```bash
 export MODELPATH=$SAVEPATH/<model training start time>
 ```
 
@@ -131,7 +132,7 @@ export MODELPATH=$SAVEPATH/<model training start time>
 
 📢 모델 테스트 시, GPU는 하나만 사용
 
-```python
+```bash
 CUDA_VISIBLE_DEVICES=0 python train_matching.py --mode=test --encoder=roberta --save_path=$MODELPATH --gpus=0
 ```
 

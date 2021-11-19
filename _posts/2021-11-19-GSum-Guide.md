@@ -71,7 +71,7 @@ rouge==1.5.5
 - ### **모델 학습**
     
     경로 설정  
-    ```
+    ```bash
     export DATA_DIR_PATH=/<processed data directory path>/
     export MODEL_DIR_PATH=/<model directory path>/
     export LOG_PATH=/<training log path>/training.log
@@ -119,7 +119,7 @@ rouge==1.5.5
     
     생성된 요약문 저장 경로 설정
     
-    ```
+    ```bash
     export RESULT_PATH=/<generated summaries path>/
     ```
     
@@ -174,16 +174,16 @@ rouge==1.5.5
     
     
     
-    ```
+    ```bash
     git clone https://github.com/pytorch/fairseq.git  
-    cd fairseq` # 현재 경로 <home>/fairseq
+    cd fairseq # 현재 경로 <home>/fairseq
 
     wget -N https://dl.fbaipublicfiles.com/fairseq/gpt2_bpe/encoder.json  
     wget -N https://dl.fbaipublicfiles.com/fairseq/gpt2_bpe/vocab.bpe
     wget -N https://dl.fbaipublicfiles.com/fairseq/gpt2_bpe/dict.txt
     ```
 
-    ```
+    ```bash
     export DATA_DIR_PATH=/<path to downloaded data>/cnn_dm
     export GUIDANCE_DIR_PATH=/<path to downloaded guidance>
     ```
@@ -225,13 +225,13 @@ rouge==1.5.5
     
     `guided_summarization` 디렉토리로 이동 (현재 경로 `<home>/guided_summarization` )
     
-    ```
+    ```bash
     wget -N https://dl.fbaipublicfiles.com/fairseq/gpt2_bpe/dict.txt
     ```
 
     데이터 저장 경로 설정
     
-    ```
+    ```bash
     export BIN_DIR_PATH=/<output binarized data directory path>/
     ```
 
@@ -254,7 +254,7 @@ rouge==1.5.5
     
     학습 파라미터 설정
 
-    ```
+    ```bash
     export MODEL_PATH=/<model save path>/
     export LOG_PATH=/<training log directory path>/training.log
     export BART_PATH=<checkpoint filename>
@@ -262,7 +262,7 @@ rouge==1.5.5
 
     (학습된 모델은 `$MODEL_PATH/$BART_PATH`의 경로에 저장됨)
     
-    ```
+    ```bash
     export TOTAL_NUM_UPDATES=20000
     export WARMUP_UPDATES=500
     export LR=3e-05
@@ -305,7 +305,7 @@ rouge==1.5.5
     
     **테스트 파라미터 설정**
     
-    ```
+    ```bash
     export TEST_DATA_PATH=/<test source data path>/
     export TEST_GUIDANCE=/<test guidance path>/
     export RESULT_PATH=/<generated summaries path>/
@@ -314,9 +314,11 @@ rouge==1.5.5
 
     *Optional Parameter*
     
-    `export MODEL_NAME=/<trained model name>/` (default : `model.pt`)  
-    `export DATA_BIN=/<trained data path>/` (default : `.`)
-    
+    ```bash
+    export MODEL_NAME=/<trained model name>/ # default : model.pt  
+    export DATA_BIN=/<trained data path>/ # default : .
+    ```
+
     <br>
 
     **요약문 생성**
@@ -329,37 +331,37 @@ rouge==1.5.5
     **결과 파일로부터 ROUGE score 계산**
     
     1) **Files2ROUGE 다운로드**
-    
-        ```bash
-        # Install Requirement
-        pip install -U git+https://github.com/pltrdy/pyrouge
-        ```
-    
-        ```bash
-        # Clone the repo, setup the module and ROUGE
-        git clone https://github.com/pltrdy/files2rouge.git
-        cd files2rouge
+
+    ```bash
+    # Install Requirement
+    pip install -U git+https://github.com/pltrdy/pyrouge
+    ```
         
-        python setup_rouge.py
-        python setup.py install
-        ```
+
+    ```bash
+    # Clone the repo, setup the module and ROUGE
+    git clone https://github.com/pltrdy/files2rouge.git
+    cd files2rouge
+        
+    python setup_rouge.py
+    python setup.py install
+    ```
     
     2) **Stanford CoreNLP 4.2.2 (for tokenize) 다운로드**
     
-        [https://stanfordnlp.github.io/CoreNLP/](https://stanfordnlp.github.io/CoreNLP/)
+        [Stanford CoreNLP 4.2.2 다운로드](https://stanfordnlp.github.io/CoreNLP/)
     
-        ```
-        export CLASSPATH=/<corenlp_download_path>/stanford-corenlp-4.2.2.jar
-        ```
+    
+    ```bash
+    export CLASSPATH=/<corenlp_download_path>/stanford-corenlp-4.2.2.jar
+    ```
     
     3) **ROUGE score 계산** 
-    
-   
         📢 ROUGE-1.5.5 버전을 설치해야함  
         
-        ```bash
-        cat test.hypo | java edu.stanford.nlp.process.PTBTokenizer -ioFileList -preserveLines > test.hypo.tokenized
-        cat test.target | java edu.stanford.nlp.process.PTBTokenizer -ioFileList -preserveLines > test.hypo.target
-        
-        files2rouge test.hypo.tokenized test.hypo.target
-        ```
+    ```bash
+    cat test.hypo | java edu.stanford.nlp.process.PTBTokenizer -ioFileList -preserveLines > test.hypo.tokenized
+    cat test.target | java edu.stanford.nlp.process.PTBTokenizer -ioFileList -preserveLines > test.hypo.target
+
+    files2rouge test.hypo.tokenized test.hypo.target
+    ```
