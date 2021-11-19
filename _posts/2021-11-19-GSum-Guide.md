@@ -37,7 +37,7 @@ NYT 데이터셋은 License가 필요하기 때문에 정확한 정보를 파악
 <br>
 
 ```python
-## **Dependency**
+## Dependency
 
 multiprocess==0.70.9
 numpy==1.17.2

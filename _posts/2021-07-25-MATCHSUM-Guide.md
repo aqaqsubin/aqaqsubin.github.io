@@ -7,8 +7,13 @@ tag : Text-Summarization
 
 # **MatchSum(Zhong et al., 2020, ACL) 실행 가이드**
 
+### **📄Paper: MatchSum(Zhong et al., 2020, ACL)** 
+Extractive Summarization as Text Matching
 
-[MATCHSUM git repo](https://github.com/maszhongming/MatchSum)
+
+### **💻 Github Repo**  
+https://github.com/maszhongming/MatchSum
+
 
 |PAPER|SOURCE|TYPE|SAMPLE|TRAIN SIZE|VAILD SIZE|TEST SIZE|DOCUMENT TOKEN|SUMMARY TOKEN|
 |---|---|---|---|---|---|---|---|---|
