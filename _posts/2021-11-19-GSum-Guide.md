@@ -1,3 +1,14 @@
+---
+title: "GSum 실행 가이드"
+date: 2021-11-19 10:14:37 -0400
+categories: NLP
+tag : Text-Summarization
+use_math: true
+
+---
+
+<br>
+
 # **GSum 실행 가이드**
 
 ### **📄Paper: GSum (Dou et al., 2021, NAACL)** 
