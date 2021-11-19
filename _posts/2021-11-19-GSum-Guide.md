@@ -14,7 +14,7 @@ use_math: true
 ### **📄Paper: GSum (Dou et al., 2021, NAACL)** 
 GSum: A General Framework for Guided Neural Abstractive Summarization
 
-### **:octocat:Github Repo**  
+### **💻 Github Repo**  
 https://github.com/neulab/guided_summarization
 
 
